@@ -90,7 +90,7 @@ enum EcActionType {
     PromoClick = 'promo_click'
 }
 ```
-#### - ImpressionFieldObject
+- #### ImpressionFieldObject
   - id: The product id (e.g. B-612). **(This field or name is required)**
   - name: The product name (e.g. Besixdouze.) **(This field or id is required)**
   - list: The list this product belongs (e.g. Search Results).
@@ -99,7 +99,7 @@ enum EcActionType {
   - variant: The variant of the product (e.g. Brown).
   - position: The product's position in a list or collection (e.g. 2).
   - price: The price of the product (e.g. 299.95).
-#### - ProductFieldObject
+- #### ProductFieldObject
   - id: The product id (e.g. B-612). **(This field or name is required)**
   - name: The product name (e.g. Besixdouze.) **(This field or id is required)**
   - brand: The brand of the product (e.g. Solar System).
@@ -109,7 +109,7 @@ enum EcActionType {
   - quantity: 
   - coupon: 
   - position: 
-#### - ActionFieldObject
+- #### ActionFieldObject
   - id: The transaction id **(required if the action type is purchase or refund)**.
   - affiliation: The store or affiliation where this transaction occured.
   - revenue: The total revenue including tax, shipping fee or other adjustments. **If this field is not set, its value will be automatically calculated using the product quantity and price fields of all products in the same hit.**
