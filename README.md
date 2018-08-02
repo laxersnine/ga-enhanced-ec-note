@@ -78,7 +78,7 @@ class ActionFieldObject {
     option: string; 
 }
 
-enmu EcActionType {
+enum EcActionType {
     Click = 'click',
     Detail = 'detail',
     Add = 'add',
