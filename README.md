@@ -17,6 +17,7 @@
     - [Click Checkout](#7-click-checkout)
     - [Click next step button on each checkout step](#8-click-next-step-button-on-each-checkout-step)
     - [Purchase (complete order)](#9-purchase-complete-order)
+    - [Refund](#10-refund)
 
 ## 0. Setup
 
@@ -216,3 +217,19 @@ for(let product of productsInTheCart) {
 ga('ec:setAction', EcActionType.Purchase, {step: 1});
 ga('send', 'pageview');
 ```
+
+## 10. Refund 
+``` Typescript
+// No need if refund the entire order.
+let productsToRefund: ProductFieldObject[] = [];
+for(let product of productsInTheCart) {
+    ga('ec:addProduct', product);
+}
+
+let transactionId: string = 'XXXXXXX';
+let category = 'yyyyy'; // e.g. Ecommerce
+let actionName = 'Refund';
+ga('ec:setAction', EcActionType.Refund, {id: transactionId});
+ga('send', 'events', category, actionName, {nonInteraction: 1});
+```
+**If you need to send refund data using an event and the event is not part of normally measured onsite behavior (i.e. not user initiated), then it’s recommended that you send a non-interaction event. This will prevent metrics such as bounce rate, time on site, etc. from being affected by the event.**
