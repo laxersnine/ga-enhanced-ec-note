@@ -1,4 +1,4 @@
-# Google Analytics Enhanced Ecommerce Note
+# [Google Analytics Enhanced Ecommerce Note](https://laxersnine.github.io/ga-enhanced-ec-note/)
 
 - [Google Analytics Enhanced Ecommerce Note](#google-analytics-enhanced-ecommerce-note)
     - [Setup](0-setup)
